@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="ie7 ie"><![endif]-->
+<!--[if IE 8 ]><html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="ie8 ie"><![endif]-->
+<!--[if IE 9 ]><html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="ie9 ie"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<title>IBD - SPOTIFY TP 2.</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="https://s0.wp.com/wp-content/themes/vip/spotify-usa/images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://s0.wp.com/wp-content/themes/vip/spotify-usa/images/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://s0.wp.com/wp-content/themes/vip/spotify-usa/images/icons/favicon-16x16.png">
+
+	
+	<style>
+
+
+
+</style>
+</head>
+<body>
+	<div align="center"> 
+	    <img width="220px" height="50px" src="https://seeklogo.com/images/S/spotify-logo-70B5462CAD-seeklogo.com.png">
+	     </div>
+		 <p>
+		 
+		 
+		 <BODY link=#000000 vlink=#000000 alink=#000000>
+
+		
+		
+		
+<script language="javascript">
+
+	function trim(s) {
+		while (s.substring(0,1) == ' ' || s.substring(0,1) == '\n') {
+			s = s.substring(1,s.length);
+		}
+		while (s.substring(s.length-1,s.length) == ' ' || s.substring(s.length-1,s.length) == '\n') {
+			s = s.substring(0,s.length-1);
+		}
+		return s;
+	}
+
+	function submete(){
+		var form = document.getElementById("consulta");
+	
+		form.resposta.value = trim(form.resposta.value);
+	
+		if(form.idConsulta.selectedIndex==0 && form.resposta.value=="")
+			alert("Você deve selecionar ou escrever uma consulta");
+		else{
+			if(form.resposta.value.lastIndexOf(";")==form.resposta.value.length-1){
+				form.resposta.value = form.resposta.value.substring(0,form.resposta.value.length-1);
+			}
+			form.submit();
+		}
+	}
+
+</script>
+
+
+
+<font face="verdana,arial,helvetica">
+<hr>
+<b><font size=+2>Spotify Collector</font></b>
+<div style="text-align: center" ><a href="index.htm" > <b>P&aacute;gina Inicial</b></a>&nbsp;|&nbsp; <a href="about.htm"><b>Sobre</b></a>&nbsp;</div>
+
+<hr>
+
+<p>
+<tbody>
+		<tr>
+			<td colspan="2"><b>Album(</b><u>id</u>, name, image_url, album_type, release_date, popularity<b>)</b></td>
+		</tr>
+		<tbody>
+		<p>
+		<tr>
+			<td colspan="2"><b>Artist(</b><u>id</u>, name, image_url, followers, popularity<b>)</b></td>
+		</tr>
+		<p>
+		<tr>
+			<td colspan="2"><b>Track(</b><u>id</u>, name, duration_ms, explicit, popularity<b>)</b></td>
+		</tr>
+		        <p>
+		<tr>
+			<td colspan="2"><b>User(</b><u>id</u>, display_name, followers<b>)</b></td>
+		</tr>
+		        <p>
+		<tr>
+			<td colspan="2"><b>Playlist(</b><u>id</u>, display_name, followers<b>)</b></td>
+		</tr>
+		        <p>
+		<tr>
+			<td colspan="2"><b>AlbumTrack(</b><u>album_id, track_id,</u>, disc_number, track_number<b>)</b></td>
+		</tr>
+		        <p>
+		<tr>
+			<td colspan="2"><b>ArtistGenre(</b><u>artist_id, genre</u><b>)</b></td>
+		</tr>
+		        <p>
+		<tr>
+			<td colspan="2"><b>ArtistAlbum(</b><u>artist_id, album_id</u><b>)</b></td>
+		</tr>
+		        <p>
+		<tr>
+			<td colspan="2"><b>TrackArtist(</b><u>track_id, artist_id</u><b>)</b></td>
+		</tr>
+		        <p>
+		<tr>
+			<td colspan="2"><b>PlaylistTrack(</b><u>playlist_id, track_id</u><b>)</b></td>
+		</tr>
+<form action="/consulta.php">
+<textarea rows="5" cols="50" name="comment">
+Escreva sua consulta...</textarea>
+<input type="BUTTON" value="Processar" onclick="javascript:submete()">
+</form>
+
+
+
+	</body>
+</html>
